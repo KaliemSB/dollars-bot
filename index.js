@@ -51,8 +51,12 @@ client.on('interactionCreate', async interaction => {
       method: 'GET',
       url: `https://api.mcsrvstat.us/2/${ip}`
     }).then(res => res.data)
-
-    const modsNumber = Math.round(server.mods.names.length / 2)
+    
+    let modsNumber = ''
+    
+    if (server.mods.names) {
+    	modsNumber = Math.round(server.mods.names.length / 2)
+    }
 
     const embed = new MessageEmbed()
       .setTitle('Informações do server:')
@@ -61,8 +65,8 @@ client.on('interactionCreate', async interaction => {
         { name: 'Versâo:', value: server.version, inline: true },
         { name: 'Players:', value: `${server.players.online} / ${server.players.max}`, inline: true },
         { name: 'Ip:', value: ip, },
-        { name: 'Mods:', value: server.mods.names.slice(0, modsNumber).join('\n'), inline: true },
-        { name: '\u200B', value: server.mods.names.slice(modsNumber, server.mods.names.length).join('\n'), inline: true },
+        { name: 'Mods:', value: server.mods.names ? server.mods.names.slice(0, modsNumber).join('\n') : 'No', inline: true },
+        { name: '\u200B', value: server.mods.names ? server.mods.names.slice(modsNumber, server.mods.names.length).join('\n') : 'No', inline: true },
       )
       .setTimestamp()
       .setThumbnail('https://cdn.discordapp.com/avatars/957076774318133268/6df65e887db00980bc4cd0c72a114b9d.png?size=2048')
