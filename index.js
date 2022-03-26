@@ -5,7 +5,7 @@ require('dotenv').config()
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 client.once('ready', client => {
-	console.log('Ready!');
+  console.log('Ready!');
 
   const guildId = null
   const guild = client.guilds.cache.get(guildId)
@@ -76,6 +76,12 @@ client.on('interactionCreate', async interaction => {
   if (interaction.commandName === 'discord') {
     interaction.reply({
       content: 'https://discord.gg/juZ2D7zHBk'
+    })
+  }
+	
+  if (interaction.commandName === 'mods') {
+    interaction.reply({
+      content: 'pasta mods: https://bit.ly/3JMxv3y'
     })
   }
 })
