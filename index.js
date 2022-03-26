@@ -84,6 +84,12 @@ client.on('interactionCreate', async interaction => {
       content: 'pasta mods: https://bit.ly/3iza169'
     })
   }
+	
+  if (interaction.commandName === 'modpack') {
+    interaction.reply({
+    content: 'pasta mods: https://bit.ly/3DbF0P3'
+  })
+}
 })
 
 client.login(process.env.TOKEN);
