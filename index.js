@@ -81,7 +81,7 @@ client.on('interactionCreate', async interaction => {
 	
   if (interaction.commandName === 'mods') {
     interaction.reply({
-      content: 'pasta mods: https://bit.ly/3JMxv3y'
+      content: 'pasta mods: https://bit.ly/3iza169'
     })
   }
 })
