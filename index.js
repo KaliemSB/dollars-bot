@@ -32,11 +32,6 @@ client.once('ready', client => {
       description: 'Modpack do servidor.'
   })
 
-  commands.create({
-      name: 'mods',
-      description: 'Mods do servidor.'
-  })
-
 });
 
 client.on('interactionCreate', async interaction => {
@@ -85,15 +80,9 @@ client.on('interactionCreate', async interaction => {
     })
   }
 	
-  if (interaction.commandName === 'mods') {
-    interaction.reply({
-      content: 'pasta mods: https://bit.ly/3iza169'
-    })
-  }
-	
   if (interaction.commandName === 'modpack') {
     interaction.reply({
-    content: 'pasta mods: https://bit.ly/3DbF0P3'
+    content: 'Link direto: https://bit.ly/3Dmh7Ev \n Link no Mega: https://bit.ly/3NnhraB'
   })
 }
 })
