@@ -82,7 +82,7 @@ client.on('interactionCreate', async interaction => {
 	
   if (interaction.commandName === 'modpack') {
     interaction.reply({
-    content: 'Link direto: https://bit.ly/3Dmh7Ev\n Link no Mega: https://bit.ly/3NnhraB'
+    content: 'Link direto: https://bit.ly/3Dmh7Ev\nLink no Mega: https://bit.ly/3NnhraB'
   })
 }
 })
